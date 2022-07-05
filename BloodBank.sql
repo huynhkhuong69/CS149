@@ -167,6 +167,7 @@ INSERT INTO appointment(first_name, last_name, birthday) VALUES
     ('Arcand', 'Denys', '1995-06-04'),
     ('Carey', 'Jim', '1997-07-15'),
     ('Pearson', 'Lester', '1999-09-30'),
-    ('Orr', 'Robert', '1990-10-12');
+    ('Orr', 'Robert', '1990-10-12'),
+    ('Ronaldo', 'Cristiano', '1990-10-12');
 SELECT * FROM appointment;
     
