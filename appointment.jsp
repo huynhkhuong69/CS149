@@ -27,6 +27,7 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Birthday</th>
+                <th>Time</th>
             </tr>
             <% while (rs.next()) { %>
                 <tr>
@@ -34,6 +35,7 @@
                     <td><%=rs.getString(2)%></td>
                     <td><%=rs.getString(3)%></td>
                     <td><%=rs.getDate(4)%></td>
+                    <td><%=rs.getTime(5)%></td>
                 </tr>
             <% }
             rs.close();
