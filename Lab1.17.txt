@@ -1,0 +1,41 @@
+/**
+ * Description: 1.17 LAB: Input and formatted output: Right-facing arrow
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Creation date: 02/03/23
+ **/
+#include <iostream>
+using namespace std;
+
+/*
+         1
+         11
+     0000111
+     00001111
+     0000111
+         11
+         1
+*/
+int main() {
+    // head is 1
+    int head;
+    cin >> head;
+    int body;
+    //body is 0
+    cin >> body;
+
+    //separate by 4 digits, so 4 spaces
+    cout <<"    " << head << endl;
+    //same as line 1 but add another head here
+    cout <<"    " << head << head << endl;
+    // add them up together
+    cout <<""<< body << body << body << body << head << head << head << endl;
+    // extra 1 here
+    cout <<""<< body << body << body << body << head << head << head << head << endl;
+    // same as line 3
+    cout <<""<< body << body << body << body << head << head << head << endl;
+    // line 2
+    cout <<"    " << head << head << endl;
+    // line 1
+    cout <<"    " << head << endl;   
+}
