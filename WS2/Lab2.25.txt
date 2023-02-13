@@ -14,7 +14,7 @@
    
 int main(void) {
     int userNum, x;
-    // Get user input value and x
+    // Get user input values and x
     printf("Enter userNum and x: ");
     scanf("%d %d", &userNum, &x);
 
