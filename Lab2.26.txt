@@ -13,6 +13,7 @@
     100
     
     The output is:
+
     After 6 hours: 50.00 mg
     After 12 hours: 25.00 mg
     After 24 hours: 6.25 mg
