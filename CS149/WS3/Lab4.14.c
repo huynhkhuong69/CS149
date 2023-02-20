@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 int main(void) {
-    
+
     //Declare variable x
     int x;
     //Prompt user to enter a positive ingeter
@@ -22,4 +22,4 @@ int main(void) {
         x =  x / 2;
     }
 
-    return 0;
+    return 0; // program exec with no error
