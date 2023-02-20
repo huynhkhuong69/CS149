@@ -7,19 +7,19 @@
 
 #include <stdio.h>
 int main(void) {
-
+    
+    //Declare variable x
     int x;
     //Prompt user to enter a positive ingeter
     printf("Enter a positive integer: ");
     //Read the input
     scanf("%d", &x);
 
-    //loop through and reverse the order
+    //Loop through and reverse the order
     while (x > 0) {
-        // x modudo (remainder is either 0 or 1)
+        //x modudo (remainder is either 0 or 1)
         printf("%d", x % 2);
         x =  x / 2;
     }
 
     return 0;
-}
