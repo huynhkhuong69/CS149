@@ -5,10 +5,11 @@
    Also learn how to use the basic of Linux command lines.
  * Author names: Khuong Huynh
  * Author emails: khuong.huynh@sjsu.edu
- * Last modified date: 02/19/2023
+ * Last modified date: 02/20/2023
  * Creation date: 02/15/2023
  **/
 
+// C library
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
