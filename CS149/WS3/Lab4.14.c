@@ -14,7 +14,9 @@ int main(void) {
     //Read the input
     scanf("%d", &x);
 
+    //loop through and reverse the order
     while (x > 0) {
+        // x modudo (remainder is either 0 or 1)
         printf("%d", x % 2);
         x =  x / 2;
     }
