@@ -1,0 +1,29 @@
+/**
+ * Description: 2.34 LAB: Input: Welcome message
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Creation date: 02/13/23
+ **/
+#include <stdio.h>
+
+    /*
+    If the input is: Pat
+
+    the output is:
+    Hello Pat, and welcome to CS Online!
+    */
+
+int main(void) {
+    char userName[50];
+
+    //Prompt user input name
+    printf("Enter your name: ");
+    //Read in the name
+    scanf("%s", userName);
+
+    //Print message
+    printf("Hello %s, and welcome to CS Online!", userName);
+
+    return 0;
+}
+

@@ -1,0 +1,39 @@
+/**
+ * Description: 2.29 LAB: Using math functions
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Creation date: 02/13/23
+ **/
+
+
+#include <stdio.h>
+#include <math.h>
+
+    /*
+    Given three floating-point numbers x, y, and z, 
+    output x to the power of z, 
+    x to the power of (y to the power of 2), 
+    the absolute value of y, 
+    and the square root of (xy to the power of z).
+    */
+
+int main(void) {
+    //Declare variables
+    double x;
+    double y;
+    double z;
+
+    //Prompt user input
+    printf("Enter three floating point numbers: \n");
+    scanf("%lf %lf %lf", &x, &y, &z);
+
+    // Print x to the power of z
+    printf("%0.2lf ", pow(x, z));
+    // Print x to the power of y to the power of 2
+    printf("%0.2lf ", pow(x, pow(y, 2)));
+    //Print alsolute of y 
+    printf("%0.2lf ", fabs(y));
+    //Print the square root of xy to the power of z
+    printf("%0.2lf", sqrt(pow(x * y, z)));
+    return 0;
+}

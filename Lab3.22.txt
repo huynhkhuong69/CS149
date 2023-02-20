@@ -1,0 +1,28 @@
+/**
+ * Description: 3.22 LAB: Smallest number
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Creation date: 02/13/23
+ **/
+#include <stdio.h>
+
+    /*
+    If the input is: 
+    7 15 3
+
+    the output is:
+    3
+    */
+
+int main(void) {
+    int one, two, three;
+
+    //Prompt user input three integers
+    printf("Enter three integers: ");
+    scanf("%d %d %d", &one, &two, &three);
+    //print the smallest integer
+    printf("%d", three);
+
+    return 0;
+}
+

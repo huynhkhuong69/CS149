@@ -1,0 +1,38 @@
+/**
+ * Description: 2.32 LAB: Input and formatted output: House real estate summary
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Creation date: 02/13/23
+ **/
+#include <stdio.h>
+#include <math.h>
+    /*
+    If the input is: 200000 210000
+    
+    the output is:
+    This house is $200000. The change is $-10000 since last month.
+    The estimated monthly mortgage is $850.000000.
+    */
+
+int main(void) {
+    int currentPrice;
+    int lastMonthsPrice;
+    int difference;
+    //Prompt user input
+    printf("Enter the current price and last month price: ");
+    //Read in current price
+    scanf("%d %d", &currentPrice, &lastMonthsPrice);
+    
+    //Calcualte change price
+    difference = currentPrice - lastMonthsPrice;
+
+    //Print current price
+    printf("This house is $%d." , currentPrice);
+    //Print the change
+    printf(" The change is $%d since last month.", difference);
+    //Estimated monthly mortgage
+    printf(" \nThe estimated monthly mortgage is $%f.", ((currentPrice*0.051)/12.0));
+
+    return 0;
+}
+

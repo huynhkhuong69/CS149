@@ -1,0 +1,41 @@
+/**
+ * Description: 2.26 LAB: Caffeine levels
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Creation date: 02/13/23
+ **/
+
+
+#include <stdio.h>
+#include <math.h>
+    /*
+    If the input is : 
+    100
+    
+    The output is:
+
+    After 6 hours: 50.00 mg
+    After 12 hours: 25.00 mg
+    After 24 hours: 6.25 mg
+    */
+int main(void) {
+    //Declare variable name
+    double caffeineMg;
+    printf("Enter the amount of caffeines(mg): \n");
+    //read in the caffe. level in type long floating point
+    scanf("%lf", &caffeineMg);
+
+    // Caffeine level after 6 hours
+    double caffeineMg6H = caffeineMg / 2;
+    // Caffeine level afetr 12 hours
+    double caffeineMg12H = caffeineMg / 4;
+    // Caffeine level after 24 hours
+    double caffeineMg24H = caffeineMg / 16;
+
+    //Print output amounts in mg
+    printf("After 6 hours: %0.2lf mg\n", caffeineMg6H);
+    printf("After 12 hours: %0.2lf mg\n", caffeineMg12H);
+    printf("After 24 hours: %0.2lf mg\n", caffeineMg24H);
+
+    return 0;
+}
