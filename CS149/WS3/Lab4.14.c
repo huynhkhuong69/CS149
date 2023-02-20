@@ -21,5 +21,4 @@ int main(void) {
         printf("%d", x % 2);
         x =  x / 2;
     }
-
     return 0; // program exec with no error
