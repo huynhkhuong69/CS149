@@ -1,0 +1,41 @@
+/**
+ * Description: 5.17 LAB: Given a sorted list of integers, output the middle integer. A negative number indicates the end of the input (the negative number is not a part of the sorted list). Assume the number of integers is always odd.
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Creation date: 02/19/23
+ **/
+#include <stdio.h>
+int main(void) {
+    //Declare variables
+    const int NUM_ELEMENTS = 9;      // Max 9 values
+    int userValues[NUM_ELEMENTS];    // Set of data specified by the user
+    int bufferSize = 0;
+
+    //loop through
+    while(1==1) {    // the loop always true
+        //Created variable n
+        //scan user input
+        //if it less than 0 stop the loop
+        int n;
+        scanf("%d", &n);
+        if (n < 0) {
+            break;
+        }
+        //assign the value n to index array
+        //increment it
+        userValues[bufferSize] = n;
+        bufferSize++;
+    }
+    //Check if values is more than 9 than print message
+    if (bufferSize > NUM_ELEMENTS) {
+        printf("Too many numbers\n");
+        return 0;
+    }
+
+    //calculate mid term
+    int mid = bufferSize / 2;
+    printf("Middle item: %d\n", userValues[mid]);
+
+
+    return 0;
+}
