@@ -1,0 +1,28 @@
+/**
+ * Description: 5.16 LAB: Write a program that reads a list of integers, and outputs those integers in reverse. The input begins with an integer indicating the number of integers that follow. For coding simplicity, follow each output integer by a comma, including the last one. Assume that the list will always contain less than 20 integers. 
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Creation date: 02/19/23
+ **/
+#include <stdio.h>
+int main(void) {
+    const int NUM_ELEMENTS = 20;         // Number of input integers
+    int userVals[NUM_ELEMENTS];     // Array to hold the user's input integers
+    int x;
+    int i;
+    //prompt user enter array element
+    printf("Enter an array elements: ");
+    //read from the array
+    scanf("%d", &x);
+
+    //loop through array
+    for (i = 0; i < x; i++) {
+        //reading it to array
+        scanf("%d", &userVals[i]);
+    }
+    //loop through and reverse order
+    for (i = x -1; i >= 0; i--) {
+        printf("%d,", userVals[i]);
+    }
+    return 0;
+}
