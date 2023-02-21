@@ -1,0 +1,56 @@
+/**
+ * Description: 5.21 LAB: Write a program that reads an integer, a list of words, and a character. 
+   The integer signifies how many words are in the list. 
+   The output of the program is every word in the list that contains the character at least once. 
+   For coding simplicity, follow each output word by a comma, even the last one. 
+   Add a newline to the end of the last output. Assume at least one word in the list will contain the given character. 
+   Assume that the list will always contain less than 20 words. 
+   Each word will always contain less than 10 characters and no spaces.
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Creation date: 02/20/23
+ **/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+
+    //Declare n to hold number of words
+    //i and J for loop
+    //array word hold the lists of word
+    //searchCharacter hold character that we are searching
+    int n, i, j;
+    char word[30][15], searchCharacter;
+
+    // Read in the number of words
+    scanf("%d", &n);
+
+    // Read in the words
+    for (i = 0; i < n; i++) {
+        scanf("%s", word[i]);
+    }
+
+    // Read in the search character and store it in word array
+    // To read in the character after the final word, add a space before %c:
+    scanf(" %c", &searchCharacter);
+
+    //Check each word for the search character
+    //Use nested for loop to loop through each word and character  of each word
+    //Inner loop check checks the character is equal to the search character
+    //If it equal we print out the word follow by a comma
+    //Then we stop the loop
+    for (i = 0; i < n; i++) {
+        for (j = 0; word[i][j] != '\0'; j++) {
+            if (word[i][j] == searchCharacter) {
+                printf("%s,", word[i]);
+                break;
+            }
+        }
+    }
+    //After we done checking all words
+    //Add new line to the end of the last output
+    printf("\n");
+
+    return 0; 
+}
