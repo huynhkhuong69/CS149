@@ -1,0 +1,38 @@
+/**
+ * Description: 4.16 LAB: Write a program that takes any number of non-negative integers as input, and outputs the max and average. A negative integer ends the input and is not included in the statistics. Assume the input contains at least one non-negative integer.
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Creation date: 02/19/23
+ **/
+#include <stdio.h>
+int main(void) {
+
+    //Declare variables
+    int userInput, max =-1, count = 0;
+    double average = 0;
+    double total = 0;
+
+    //loop through until user enter negative number
+    while(1) {
+        scanf("%d", &userInput);
+
+        //if userInput is a negativ number
+        //then we calculate the average 
+        //and print out max and average
+        //and we stop the loop
+        if(userInput < 0) {
+            average = total / count;
+            printf("%d %0.2lf\n", max, average);
+            break;
+        }
+        //else we increment counter and total
+        // then find the total, max and count
+        else {
+            count += 1;
+            total += userInput;
+            if(userInput > max)
+                max = userInput;
+        }
+    }
+    return 0;
+}
