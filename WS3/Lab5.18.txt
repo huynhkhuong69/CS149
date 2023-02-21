@@ -1,0 +1,42 @@
+/**
+ * Description: 5.18 LAB: Write a program that first gets a list of integers from input. 
+    The input begins with an integer indicating the number of integers that follow. 
+    Then, get the last value from the input, which indicates a threshold. 
+    Output all integers less than or equal to that last threshold value. 
+    Assume that the list will always contain less than 20 integers.
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Creation date: 02/19/23
+ **/
+#include <stdio.h>
+int main(void) {
+
+    //Declare array size of 20 integers
+    int array[20];
+    int num;        //variable num store integers
+    int threshold;  // tore threshold value
+    int integer;    //store integers we get from user 
+
+    //prompt input
+    printf("Enter the number of integers: ");
+    scanf("%d", &num);
+
+    
+    for (int i = 0; i < num; i++) {
+        scanf("%d", &integer);
+        array[i] = integer;
+    }
+
+    //iterate through array list and 
+    //print out integers less than the threshold value
+    printf("Output: ");
+    scanf("%d", &threshold);
+
+    for (int i = 0; i < num; i++) {
+        if (array[i] < threshold) {
+            printf("%d, ", array[i]);
+        }
+    }
+
+    return 0;
+}
