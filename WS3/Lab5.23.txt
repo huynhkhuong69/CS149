@@ -1,0 +1,60 @@
+/**
+ * Description: 5.22 LAB: Write a program that reads a list of integers, and outputs the two smallest integers in the list, in ascending order. 
+   The input begins with an integer indicating the number of integers that follow. 
+   You can assume that the list will have at least 2 integers and less than 20 integers.
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Creation date: 02/20/23
+ **/
+
+
+#include <stdio.h>
+
+int main(void) {
+    
+    //Declare variable to store smallest and second smallest integer
+    int smallest1, smallest2;
+    
+    //Declare an array that hold at least 20 integers
+    //n is used to store the number of integers
+    int array[20];
+    int n;
+    int i;
+    
+    //read the user input
+    scanf("%d", &n);
+    
+    //loop through user input and read it into array
+    for (i=0 ; i<n; i++)
+        scanf("%d", &array[i]);
+        
+    
+    //if first array is smallest among first two elements of array
+    //then smallest is first element and second smallest is second element
+    if (array[0] < array[1]) {
+        smallest1 = array[0];
+        smallest2 = array[1];
+    }
+    //else smallest is second element and second smallest is first element
+    else {
+      smallest1 = array[1];
+      smallest2 = array[0];
+    }
+    
+    //iterating integer array from 3rd element to find the smallest and second smallest element
+    //by comparing with assumed smallest and second smallest array element
+    for (i=2; i<n; i++) {
+        if (array[i] < smallest1) {
+        smallest2 = smallest1;
+        smallest1 = array[i];
+        }
+        else if (array[i] < smallest2) {
+            smallest2 = array[i];
+        }
+    }
+    
+    //Printing the value of the smallest and second smallest element
+    printf("%d and %d", smallest1, smallest2);
+   
+    return 0;
+}
