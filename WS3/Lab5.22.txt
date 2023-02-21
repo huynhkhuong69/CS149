@@ -1,0 +1,49 @@
+/**
+ * Description: 5.22 LAB: Write a program that first gets a list of integers from input. 
+   The input begins with an integer indicating the number of integers that follow. 
+   Assume that the list will always contain less than 20 integers.
+   That list is followed by two more integers representing lower and upper bounds of a range. 
+   Your program should output all integers from the list that are within that range (inclusive of the bounds). 
+   For coding simplicity, follow each output integer by a comma, even the last one. 
+   The output ends with a newline.
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Creation date: 02/20/23
+ **/
+
+
+#include <stdio.h>
+
+int main(void) {
+
+    int arr[20];                //list contain less than 20 integers
+    
+    int i, n, lower, upper;     //Declare variables for scanning lower and upper bound
+                                //n is the number of element store in the array
+                                //i is for loop
+                                
+    //Prompt user input
+    scanf("%d", &n);
+
+    //Iterating the entire array and scanning for element 
+    //that corresponding array index
+    for (i = 0; i < n; ++i) {
+        scanf("%d", &(arr[i]));
+    }
+
+    //Read lower and upper 
+    scanf("%d", &lower);
+    scanf("%d", &upper);
+
+    //loop through entire array
+    //if the element that falls within the range upper or lower
+    //print out the element follow by a comma
+    for (i = 0; i < n; ++i) {
+        if (arr[i] >= lower && arr[i] <= upper)
+            printf("%d,", arr[i]);
+    }
+
+    //Add new line at at the end
+    printf("\n");
+    return 0;
+}
