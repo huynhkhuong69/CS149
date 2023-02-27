@@ -1,3 +1,9 @@
+/**
+ * Description: 6.20 LAB: One lap around a standard high-school running track is exactly 0.25 miles. Define a function named LapsToMiles that takes a double as a parameter, representing the number of laps, and returns a double that represents the number of miles. Then, write a main program that takes a number of laps as an input, calls function LapsToMiles() to calculate the number of miles, and outputs the number of miles.
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Creation date: 02/27/23
+ **/
 #include <stdio.h>
 
 /* Define a function call */
