@@ -1,8 +1,21 @@
+/**
+ * Description: 6.30 LAB: Write a program whose inputs are four integers, and whose outputs are the maximum and the minimum of the four values.
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Creation date: 02/27/23
+ **/
+
 #include <stdio.h>
 
+/* Define function MIN/Max */
 int MaxNumber(int num1, int num2, int num3, int num4) {
     int max;
-
+    
+    //if num1 greater than num2 then max is num1
+    //else max is num2
+    //if num3 greater than max then max is num3
+    //if num4 greater than max then max is num4
+    //return max
     if(num1 > num2) {
         max = num1;
     }
@@ -21,6 +34,12 @@ int MaxNumber(int num1, int num2, int num3, int num4) {
 int MinNumber(int num1, int num2, int num3, int num4) {
     int min;
     
+    //if num1 less than num2 then min is num1
+    //else min is num2
+    //if num2 less than min then min is min2
+    //if num3 less than min then min is num3
+    //if num4 less than min then min is num4
+    //return min
     if (num1 < num2) {
         min = num1;
     }
