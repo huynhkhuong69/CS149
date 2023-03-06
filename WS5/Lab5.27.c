@@ -1,3 +1,10 @@
+/**
+ * Description: 5.27 LAB: Write a program that takes in a line of text as input, and outputs that line of text in reverse. You may assume that each line of text will not exceed 50 characters.
+ * The program repeats, ending when the user enters "Done", "done", or "d" for the line of text.
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Creation date: 03/06/23
+ **/
 
 #include <stdio.h>
 #include <string.h>
@@ -26,14 +33,14 @@ int main () {
         //Declare integer name length 
         //iterate through the lenght of text divide by 2
         //store text index in the temp
-        //reserve the text and print out the string
+        //reserve the text
         int length = strlen(text);
         for (int i = 0; i < length / 2; i++) {
             char temp = text[i];
             text[i] = text[length - i - 2];
             text[length - i - 2] = temp;
         }
-
+       // print out the string
         printf("%s\n", text);
     }
 
