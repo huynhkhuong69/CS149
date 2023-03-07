@@ -1,3 +1,13 @@
+/**
+ * Description: Implement a program that open the files and read all the unique names 
+   including the empty lines "\n" in a file. Replace new line \n with NULL character "\0".
+   Print out standard error message if there is an empty line in the file.
+   Compute the name counts of one or more input files in a parallel fashion using multiple processes.
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Last modified date: 03/06/2023
+ * Creation date: 03/01/2023
+ **/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -24,7 +34,7 @@
 
 */
 
-/// @brief
+
 /// @param argc
 /// @param argv
 /// @return
@@ -63,7 +73,7 @@ int main(int argc, char *argv[])
         // create pipe
         if (pipe(fd[i - 1]) == -1)
         {
-            perror("pipe");
+            perror("pipe failed!");
             return 1;
         }
 
@@ -71,7 +81,7 @@ int main(int argc, char *argv[])
         pid = fork();
         if (pid < 0)
         {
-            perror("fork");
+            perror("fork failed!");
             return 1;
         }
         else if (pid == 0)
