@@ -1,3 +1,21 @@
+/**
+ * Description: 
+ * Regarding the timer info for each process: you can use the timer.h library to record the start time of spawning each child process in the parent (see time_demo.c). 
+ * Upon finish of an exec (either a successful finish or termination via a signal), the parent process should record the finish runtime in the data structure, 
+ * and it should write to the output file the string "Finished at FIN, runtime duration DUR" where FIN is the finish time and DUR is the duration of the execution. 
+ * You will need the data structures proposed in order to record the start time of each process and compute its run duration.
+ *The parent will re-start the executable if the command took more than two seconds (>2) to complete; it will also open new .out and .err files for the new PID and print "RESTARTING" at the top of those files. 
+ *Therefore, a process restarts as long as its last execution took more than 2 (>2) seconds. 
+ *For example, in the example below the sleep 5 command will restart (unless someone kills sleep early with 'killall' or 'kill -9').
+ *If a process completed in 2 or less (<=2) seconds after starting, proc_manager will not restart it and will print a message "spawning too fast" to the error file for the process. 
+ *If it was terminated (e.g. by a kill signal) right after it started, or it had some other failure that caused it to exit immediately, it won't restart, since it exited immediately. 
+ *In those cases proc_manager will also not restart it and will print a message "spawning too fast" to the error file for the process.
+ * Author names: Khuong Huynh
+ * Author emails: khuong.huynh@sjsu.edu
+ * Last modified date: 04/27/2023
+ * Creation date: 04/17/2023
+ **/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
