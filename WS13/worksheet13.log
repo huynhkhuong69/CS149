@@ -1,0 +1,16 @@
+ 1017  df  -h --total
+ 1018  find
+ 1019  du -h /home/user/Desktop | sort -rn
+ 1020  du -h /home/users/Desktop | sort -rn
+ 1021  du -h /users/Desktop | sort -rn
+ 1022  du
+ 1023  du -h ./datafiles
+ 1024  du -h --exclude="*.txt"
+ 1025  rsync
+ 1026  rsync -a /opt/filename.zip/tmp/
+ 1027  rsync -a /opt/filename.zip /tmp/newfilename.zip
+ 1028  rsync -a /var/www/domain.com/public_html/ /var/www/domain.com/public_html_backup/
+ 1029  rmdir
+ 1030  locate
+ 1031  locate /var/db/locate.database
+ 1032  ln
